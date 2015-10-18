@@ -9,7 +9,7 @@
   <link href="bootstrap.min.css" rel= "stylesheet" text= "text/css">
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMVkOLrJpc8zFyJIeCpnsRu7I7sVSUjJI&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmFsGn8bm2ZwEyWGUarM8po5jQBQou-wM&callback=initMap">
     </script>
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
 <!-- Load jQuery -->
@@ -51,7 +51,7 @@
   </div>
   </div>
 
-  <div class = "showStuff"> 
+  <div class = "showStuff" style = "overflow:scroll; height: 1000px;"> 
   <h1 id = "box1">  Where would you like to go! </h1>
   <div id = "mapcontainer">
   <div id = "map">
@@ -69,30 +69,31 @@
       </table>
     </div>
   </div>
-  <div class = "buttonholder2"> <button type="button" class="btn btn-success btn-lg" onclick = "jtheb()" > Calculate 
+  <div class = "buttonholder2"> <button type="button" class="btn btn-success btn-lg" onclick = "jtheb()" id = "box-links"> <a href = "#box2">Calculate</a>
+</button>
 </button> </div>
   </div>
   </div>
 <div class = "timetogetawatch">
-<h1> Let's Start Crafting a Schedule!</h1>
-<input id = "start" class="control" type="text" 
+<h1 id = "box2"> Let's Start Crafting a Schedule!</h1>
+<input id = "complete" class="controls" type="text" 
 placeholder="Where are you starting from?" autocomplete = "on">
 
-<div id="listing">
-      <table id="resultsTable">
-        <tbody id="fesults"></tbody>
-      </table>
-    </div>
-<input id = "end" class="control" type="text" 
+<p>Event 1</p>
+<p>Event 2</p>
+<p>Event 3</p>
+<p>Event 4</p>
+<input id = "complete" class="controls" type="text" 
 placeholder="Where do you want to end?" autocomplete = "on">
 <p> </p>
-<button type="button" class="btn btn-success btn-lg" onclick = "calcRoute()" > Create! 
+<button type="button" class="btn btn-success btn-lg" onclick = "#" id = "box-links"> <a href = "#box3"><p>Create!</p></a>
 </button>
 </div>
 <div class = "final">
-<h1> <u> Here's your final route! Have fun!</u> </h1>
+<h1 id = "box3"> <u> Here's your final route! Have fun!</u> </h1>
+<div class = "directions-panel">
 <h1> Directions </h1>
-<div id = "directions-panel">
+
 
 </div>
 </div>
