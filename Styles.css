@@ -121,9 +121,15 @@ padding-bottom: 4px;
 #fesults{
 	font-size: 27px;
 }
-.start{
-	height:100px;
+#start{
+	width:500px;
+	height:50px;
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
 }
-.end{
-	height:100px;
+#end{
+	width:500px;
+	height:50px;
+	font-size:30px;
+		font-family: 'Raleway', sans-serif;
 }
