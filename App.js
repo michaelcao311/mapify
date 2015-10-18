@@ -1,8 +1,10 @@
 
 google.maps.event.addDomListener(window, 'load', initialize);
   google.maps.event.addDomListener(window, 'load', initialize2);
+  google.maps.event.addDomListener(window, 'load', initialize3);
 var service;
 var map;
+var map2;
 var autocomplete;
 var InfoWindow;
 var marker;
@@ -17,15 +19,21 @@ var locations3 = []; //the true locations of each place
  var directionsService;
  
 function initialize2() {
- directionsService = new google.maps.DirectionsService();
-  directionsDisplay = new google.maps.DirectionsRenderer();
-   directionsDisplay.setMap(map);
-  directionsDisplay.setPanel(document.getElementById('directions-panel'));
     map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 8
   });
+}
 
+function initialize3(){
+ directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  directionsDisplay.setPanel(document.getElementById('directions-panel'));
+     map2 = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+        directionsDisplay.setMap(map2);
 }
    
    

@@ -107,12 +107,16 @@ border-bottom: 1px solid #dbdbdb;
 text-align: center;
 padding-bottom: 4px;
 }
-.directions-panel{
+#directions-panel{
 	width:50%;
 	float:left;
 	height:80%;
 }
-
+#map-canvas{
+	width:50%;
+	float:right;
+	height:80%;
+}
 .buttonholder2{
 	padding-top: 5px;
 	text-align: center;
