@@ -58,10 +58,10 @@ function loadMap(){
   var lats = city.geometry.location.lat();
   var lngs = city.geometry.location.lng();
   var pyrmont = {lat: lats, lng: lngs};
-  
+
   InfoWindow = new google.maps.InfoWindow();
 
-  
+
   service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: pyrmont,
@@ -74,7 +74,7 @@ function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     clearResults();
     for (var i = 0; i < results.length; i++) {
-     
+
       selected.push(false);
       createMarker(results[i], i);
     }
@@ -99,11 +99,11 @@ function createMarker(place, i) {
 }
 
 function addResult(result, i, marker) {
-  
+
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
   var markerIcon = MARKER_PATH + markerLetter + '.png';
-  
+
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
   tr.onclick = function() {
@@ -151,7 +151,7 @@ function clearFesults() {
   while (fesults.childNodes[0]) {
     fesults.removeChild(fesults.childNodes[0]);
   }
-  
+
 }
 
 function calcRoute() {
@@ -173,7 +173,6 @@ function calcRoute() {
   });
 }
 function next() {
-  alert(locations3.length - 1 + " " + count);
   if (locations3.length - 1 === count){
 
     var start = locations3[count].geometry.location;
@@ -218,8 +217,8 @@ function jtheb() {
       locations3[j] = locations2[i];
       j++;
     }
-    
-    
+
+
   };
   formTable();
 }
@@ -248,18 +247,18 @@ function formTable(){
       marker2.setAnimation(google.maps.Animation.BOUNCE);
     }
 
-    
+
   });
-    
-    
+
+
     var iconTd = document.createElement('td');
     var nameTd = document.createElement('td');
     var icon = document.createElement('img');
-    
+
     icon.src = markerIcon;
     icon.setAttribute('class', 'placeIcon');
     icon.setAttribute('className', 'placeIcon');
-    
+
     var name = document.createTextNode(locations3[i].name); 
     iconTd.appendChild(icon);
     nameTd.appendChild(name);
@@ -267,7 +266,7 @@ function formTable(){
     var result = document.getElementById('fesults');
     tr.appendChild(nameTd);
     result.appendChild(tr);
-    
+
   }
 }
 /*function search() {
